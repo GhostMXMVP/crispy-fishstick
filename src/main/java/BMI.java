@@ -8,13 +8,14 @@
  * @author vivaantiwari
  */
 import java.util.*;
+
 public class BMI {
 
     void BMICal(double m, double h, String n, double a, String g, String e) {
         Scanner sc = new Scanner(System.in);
         double bmi = m / (h * h);
         double bmr = 0;
-        double new_Height = h*100; // convert height in cm for BMR
+        double new_Height = h * 100; // convert height in cm for BMR
         double maintenance_cal = 0;
         if (g.equalsIgnoreCase("Male")) {
             //Male BMR = 10W + 6.25h -5A + 5
@@ -28,9 +29,9 @@ public class BMI {
             } else if (e.equalsIgnoreCase("heavy")) {
                 maintenance_cal = bmr * 1.725;
             }
-        } else if(g.equalsIgnoreCase("Female")) {
+        } else if (g.equalsIgnoreCase("Female")) {
             // Female BMR = BMR=10W+6.25H−5A−161
-            bmr = 10*m + 6.25*new_Height - 5*a - 161;
+            bmr = 10 * m + 6.25 * new_Height - 5 * a - 161;
             if (e.equalsIgnoreCase("little") || e.equalsIgnoreCase("none")) {
                 maintenance_cal = bmr * 1.2;
             } else if (e.equalsIgnoreCase("light")) {
@@ -41,8 +42,8 @@ public class BMI {
                 maintenance_cal = bmr * 1.725;
             }
         }
-        
-        if(bmi<=18.5) {
+
+        if (bmi <= 18.5) {
             System.out.println("Name: " + n);
             System.out.println();
             System.out.println("Age: " + a);
@@ -57,17 +58,17 @@ public class BMI {
             System.out.println();
             System.out.println("You are underweight");
             System.out.println();
-            
+
             System.out.println("Basal Metabolic Rate (BMR, which is the calories you need to take to be alive at rest): " + bmr);
             System.out.println("Maintenance calories: " + maintenance_cal);
-            
+
             System.out.println("Since you are underweight, to increase your weight you need to consume mroe calories than your maintenance calories, which is the calories needed to consume to maintain your weight");
             System.out.println();
-            
+
             // if weight is normal, protein target should be 1.6g per kg of body weight
             System.out.println("Weight: " + m);
-            double protein_target = m*1.6;
-            
+            double protein_target = m * 1.6;
+
             System.out.println("Weight: " + m);
             System.out.println("Enter your target weight (the weight you want to get by losing weight) : ");
             double target_w = sc.nextDouble();
@@ -75,11 +76,11 @@ public class BMI {
             double time = sc.nextDouble();
             System.out.println("Enter unit of time(weeks/months/years): ");
             String unit_t = sc.next();
-            if(unit_t.equalsIgnoreCase("weeks")) {
+            if (unit_t.equalsIgnoreCase("weeks")) {
                 time = time * 7;
-            } else if(unit_t.equalsIgnoreCase("months")) {
+            } else if (unit_t.equalsIgnoreCase("months")) {
                 time = time * 30;
-            } else if(unit_t.equalsIgnoreCase("years")) {
+            } else if (unit_t.equalsIgnoreCase("years")) {
                 time = time * 365;
             }
             double weight_toLose = m - target_w;
@@ -103,20 +104,20 @@ public class BMI {
             System.out.println("BMI: " + bmi);
             System.out.println();
             System.out.println("You are normal weight");
-            
+
             System.out.println();
-            
+
             System.out.println("Basal Metabolic Rate (BMR, which is the calories you need to take to be alive at rest): " + bmr);
             System.out.println("Maintenance calories: " + maintenance_cal);
 
             System.out.println("Since you are normal weight, you do not need to lose calories. If you want to gain calories, you will have to eat more calories than your maintenance calories, which is the calories you need to take to maintain your weight");
-            
+
             System.out.println();
-            
+
             // if weight is normal, protein target should be 1.6g per kg of body weight
             System.out.println("Weight: " + m);
-            double protein_target = m*1.6;
-            
+            double protein_target = m * 1.6;
+
             System.out.println("Weight: " + m);
             System.out.println("Enter your target weight (the weight you want to get by losing weight) : ");
             double target_w = sc.nextDouble();
@@ -124,11 +125,11 @@ public class BMI {
             double time = sc.nextDouble();
             System.out.println("Enter unit of time(weeks/months/years): ");
             String unit_t = sc.next();
-            if(unit_t.equalsIgnoreCase("weeks")) {
+            if (unit_t.equalsIgnoreCase("weeks")) {
                 time = time * 7;
-            } else if(unit_t.equalsIgnoreCase("months")) {
+            } else if (unit_t.equalsIgnoreCase("months")) {
                 time = time * 30;
-            } else if(unit_t.equalsIgnoreCase("years")) {
+            } else if (unit_t.equalsIgnoreCase("years")) {
                 time = time * 365;
             }
             double weight_toLose = m - target_w;
@@ -150,16 +151,16 @@ public class BMI {
             System.out.println("BMI: " + bmi);
             System.out.println();
             System.out.println("You are overweight");
-            
+
             System.out.println();
-            
+
             System.out.println("Basal Metabolic Rate (BMR, which is the calories you need to take to be alive at rest): " + bmr);
             System.out.println("Maintenance calories: " + maintenance_cal);
             System.out.println();
             System.out.println("Since you are overweight, you will need to eat lesser calories than your maintenance calories, which is the calories you need to take to maintain your weight");
-            
+
             System.out.println();
-            
+
             System.out.println("Weight: " + m);
             System.out.println("Enter your target weight (the weight you want to get by losing weight) : ");
             double target_w = sc.nextDouble();
@@ -167,11 +168,11 @@ public class BMI {
             double time = sc.nextDouble();
             System.out.println("Enter unit of time(weeks/months/years): ");
             String unit_t = sc.next();
-            if(unit_t.equalsIgnoreCase("weeks")) {
+            if (unit_t.equalsIgnoreCase("weeks")) {
                 time = time * 7;
-            } else if(unit_t.equalsIgnoreCase("months")) {
+            } else if (unit_t.equalsIgnoreCase("months")) {
                 time = time * 30;
-            } else if(unit_t.equalsIgnoreCase("years")) {
+            } else if (unit_t.equalsIgnoreCase("years")) {
                 time = time * 365;
             }
             double weight_toLose = m - target_w;
@@ -196,14 +197,14 @@ public class BMI {
             System.out.println("You have Class I Obesity");
 
             System.out.println();
-            
+
             System.out.println("Basal Metabolic Rate (BMR, which is the calories you need to take to be alive at rest): " + bmr);
             System.out.println("Maintenance calories: " + maintenance_cal);
 
             System.out.println("Since you have Class I Obesity, you will need to eat lesser calories than your maintenance calories, which is the calories you need to take to maintain your weight");
-            
+
             System.out.println();
-            
+
             System.out.println("Weight: " + m);
             System.out.println("Enter your target weight (the weight you want to get by losing weight) : ");
             System.out.println();
@@ -212,11 +213,11 @@ public class BMI {
             double time = sc.nextDouble();
             System.out.println("Enter unit of time(weeks/months/years): ");
             String unit_t = sc.next();
-            if(unit_t.equalsIgnoreCase("weeks")) {
+            if (unit_t.equalsIgnoreCase("weeks")) {
                 time = time * 7;
-            } else if(unit_t.equalsIgnoreCase("months")) {
+            } else if (unit_t.equalsIgnoreCase("months")) {
                 time = time * 30;
-            } else if(unit_t.equalsIgnoreCase("years")) {
+            } else if (unit_t.equalsIgnoreCase("years")) {
                 time = time * 365;
             }
             double weight_toLose = m - target_w;
@@ -239,14 +240,14 @@ public class BMI {
             System.out.println("You have Class II Obesity");
 
             System.out.println();
-            
+
             System.out.println("Basal Metabolic Rate (BMR, which is the calories you need to take to be alive at rest): " + bmr);
             System.out.println("Maintenance calories: " + maintenance_cal);
 
             System.out.println("Since you have Class II Obesity, you have extreme obesity, hence to do extreme weight loss, you will have to eat much less calories than your maintenance calories ,which is the calories you need to take to maintain your weight");
-            
+
             System.out.println();
-            
+
             System.out.println("Weight: " + m);
             System.out.println("Enter your target weight (the weight you want to get by losing weight) : ");
             System.out.println();
@@ -255,11 +256,11 @@ public class BMI {
             double time = sc.nextDouble();
             System.out.println("Enter unit of time(weeks/months/years): ");
             String unit_t = sc.next();
-            if(unit_t.equalsIgnoreCase("weeks")) {
+            if (unit_t.equalsIgnoreCase("weeks")) {
                 time = time * 7;
-            } else if(unit_t.equalsIgnoreCase("months")) {
+            } else if (unit_t.equalsIgnoreCase("months")) {
                 time = time * 30;
-            } else if(unit_t.equalsIgnoreCase("years")) {
+            } else if (unit_t.equalsIgnoreCase("years")) {
                 time = time * 365;
             }
             double weight_toLose = m - target_w;
@@ -280,16 +281,16 @@ public class BMI {
             System.out.println("BMI: " + bmi);
             System.out.println();
             System.out.println("You have Class III obesity (severely obese)");
-            
+
             System.out.println();
-            
+
             System.out.println("Basal Metabolic Rate (BMR, which is the calories you need to take to be alive at rest): " + bmr);
             System.out.println("Maintenance calories: " + maintenance_cal);
 
             System.out.println("Since you are severely overweight, you need to take much less calories to do weight loss than your maintencance calories, which is the calories you need to take to maintain your weight");
-            
+
             System.out.println();
-            
+
             System.out.println("Weight: " + m);
             System.out.println("Enter your target weight (the weight you want to get by losing weight) : ");
             System.out.println();
@@ -298,11 +299,11 @@ public class BMI {
             double time = sc.nextDouble();
             System.out.println("Enter unit of time(weeks/months/years): ");
             String unit_t = sc.next();
-            if(unit_t.equalsIgnoreCase("weeks")) {
+            if (unit_t.equalsIgnoreCase("weeks")) {
                 time = time * 7;
-            } else if(unit_t.equalsIgnoreCase("months")) {
+            } else if (unit_t.equalsIgnoreCase("months")) {
                 time = time * 30;
-            } else if(unit_t.equalsIgnoreCase("years")) {
+            } else if (unit_t.equalsIgnoreCase("years")) {
                 time = time * 365;
             }
             double weight_toLose = m - target_w;
@@ -325,7 +326,7 @@ public class BMI {
         double height = sc.nextDouble();
         System.out.println("Enter age: ");
         double age = sc.nextDouble();
-        System.out.println("Input activity level (little/no excercise/light excercise/moderate excercise/heavy excercise: )");      
+        System.out.println("Input activity level (little/no excercise/light excercise/moderate excercise/heavy excercise: )");
         String excercise = sc.next();
         BMI obj = new BMI();
         obj.BMICal(mass, height, name, age, gender, excercise);
