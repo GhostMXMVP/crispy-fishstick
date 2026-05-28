@@ -41,6 +41,53 @@ public class BMI {
                 maintenance_cal = bmr * 1.725;
             }
         }
+        
+        if(bmi<=18.5) {
+            System.out.println("Name: " + n);
+            System.out.println();
+            System.out.println("Age: " + a);
+            System.out.println();
+            System.out.println("Gender: " + g);
+            System.out.println();
+            System.out.println("Height: " + h);
+            System.out.println();
+            System.out.println("Weight: " + m);
+            System.out.println();
+            System.out.println("BMI: " + bmi);
+            System.out.println();
+            System.out.println("You are underweight");
+            System.out.println();
+            
+            System.out.println("Basal Metabolic Rate (BMR, which is the calories you need to take to be alive at rest): " + bmr);
+            System.out.println("Maintenance calories: " + maintenance_cal);
+            
+            System.out.println("Since you are underweight, to increase your weight you need to consume mroe calories than your maintenance calories, which is the calories needed to consume to maintain your weight");
+            System.out.println();
+            
+            // if weight is normal, protein target should be 1.6g per kg of body weight
+            System.out.println("Weight: " + m);
+            double protein_target = m*1.6;
+            
+            System.out.println("Weight: " + m);
+            System.out.println("Enter your target weight (the weight you want to get by losing weight) : ");
+            double target_w = sc.nextDouble();
+            System.out.println("Enter the time period by which you want to lose your weight: ");
+            double time = sc.nextDouble();
+            System.out.println("Enter unit of time(weeks/months/years): ");
+            String unit_t = sc.next();
+            if(unit_t.equalsIgnoreCase("weeks")) {
+                time = time * 7;
+            } else if(unit_t.equalsIgnoreCase("months")) {
+                time = time * 30;
+            } else if(unit_t.equalsIgnoreCase("years")) {
+                time = time * 365;
+            }
+            double weight_toLose = m - target_w;
+            double cal_deficit_total = weight_toLose * 7700; //since 1kg body fat has 7700 calories
+            double cal_deficit = cal_deficit_total / time;
+            System.out.println();
+            System.out.println("If you want to lose " + weight_toLose + " to attain a weight of " + target_w + " in a period of " + time + " , then you need to consume " + cal_deficit + " to attain your target weight");
+        }
 
         if (bmi >= 18.5 && bmi <= 24.9) {
             System.out.println("Name: " + n);
