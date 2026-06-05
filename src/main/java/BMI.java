@@ -13,33 +13,33 @@ public class BMI {
 
     void BMICal(double m, double h, String n, double a, String g, String e) {
         Scanner sc = new Scanner(System.in);
-        double bmi = m / (h * h);
+        double bmi = Math.round(m / (h * h));
         double bmr = 0;
         double new_Height = h * 100; // convert height in cm for BMR
         double maintenance_cal = 0;
         if (g.equalsIgnoreCase("Male")) {
             //Male BMR = 10W + 6.25h -5A + 5
-            bmr = 10 * m + 6.25 * new_Height - 5 * a + 5;
+            bmr = Math.round(10 * m + 6.25 * new_Height - 5 * a + 5);
             if (e.equalsIgnoreCase("little") || e.equalsIgnoreCase("none")) {
-                maintenance_cal = bmr * 1.2;
+                maintenance_cal = Math.round(bmr * 1.2);
             } else if (e.equalsIgnoreCase("light")) {
-                maintenance_cal = bmr * 1.375;
+                maintenance_cal = Math.round(bmr * 1.375);
             } else if (e.equalsIgnoreCase("moderate")) {
-                maintenance_cal = bmr * 1.55;
+                maintenance_cal = Math.round(bmr * 1.55);
             } else if (e.equalsIgnoreCase("heavy")) {
-                maintenance_cal = bmr * 1.725;
+                maintenance_cal = Math.round(bmr * 1.725);
             }
         } else if (g.equalsIgnoreCase("Female")) {
             // Female BMR = BMR=10W+6.25H−5A−161
             bmr = 10 * m + 6.25 * new_Height - 5 * a - 161;
             if (e.equalsIgnoreCase("little") || e.equalsIgnoreCase("none")) {
-                maintenance_cal = bmr * 1.2;
+                maintenance_cal = Math.round(bmr * 1.2);
             } else if (e.equalsIgnoreCase("light")) {
-                maintenance_cal = bmr * 1.375;
+                maintenance_cal = Math.round(bmr * 1.375);
             } else if (e.equalsIgnoreCase("moderate")) {
-                maintenance_cal = bmr * 1.55;
+                maintenance_cal = Math.round(bmr * 1.55);
             } else if (e.equalsIgnoreCase("heavy")) {
-                maintenance_cal = bmr * 1.725;
+                maintenance_cal = Math.round(bmr * 1.725);
             }
         }
 
@@ -89,7 +89,7 @@ public class BMI {
             System.out.println();
             System.out.println("If you want to lose " + weight_toLose + " to attain a weight of " + target_w + " in a period of " + time + " , then you need to consume " + cal_deficit + " to attain your target weight");
         }
-
+        
         if (bmi >= 18.5 && bmi <= 24.9) {
             System.out.println("Name: " + n);
             System.out.println();
