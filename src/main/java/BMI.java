@@ -85,11 +85,11 @@ public class BMI {
             }
             double weight_toLose = m - target_w;
             double cal_deficit_total = weight_toLose * 7700; //since 1kg body fat has 7700 calories
-            double cal_deficit = cal_deficit_total / time;
+            double cal_deficit = Math.round(cal_deficit_total / time);
             System.out.println();
-            System.out.println("If you want to lose " + weight_toLose + " to attain a weight of " + target_w + " in a period of " + time + " , then you need to consume " + cal_deficit + " to attain your target weight");
+            System.out.println("If you want to lose " + weight_toLose + "kg to attain a weight of " + target_w + "kg in a period of " + time + " " + unit_t + ", then you need to consume " + cal_deficit + " to attain your target weight");
         }
-        
+
         if (bmi >= 18.5 && bmi <= 24.9) {
             System.out.println("Name: " + n);
             System.out.println();
@@ -177,7 +177,7 @@ public class BMI {
             }
             double weight_toLose = m - target_w;
             double cal_deficit_total = weight_toLose * 7700; //since 1kg body fat has 7700 calories
-            double cal_deficit = cal_deficit_total / time;
+            double cal_deficit = Math.round(cal_deficit_total / time);
             System.out.println();
             System.out.println("If you want to lose " + weight_toLose + " to attain a weight of " + target_w + " in a period of " + time + " , then you need to consume " + cal_deficit + " to attain your target weight");
         } else if (bmi >= 30 && bmi <= 34.9) {
@@ -222,8 +222,8 @@ public class BMI {
             }
             double weight_toLose = m - target_w;
             double cal_deficit_total = weight_toLose * 7700; //since 1kg body fat has 7700 calories
-            double cal_deficit = cal_deficit_total / time;
-            System.out.println("If you want to lose " + weight_toLose + " to attain a weight of " + target_w + " in a period of " + time + " , then you need to consume " + cal_deficit + " to attain your target weight");
+            double cal_deficit = Math.round(cal_deficit_total / time);
+            System.out.println("If you want to lose " + weight_toLose + "kg to attain a weight of " + target_w + "kg in a period of " + time + unit_t + " , then you need to consume " + cal_deficit + " to attain your target weight");
         } else if (bmi >= 35 && bmi <= 39.9) {
             System.out.println("Name: " + n);
             System.out.println();
@@ -265,7 +265,7 @@ public class BMI {
             }
             double weight_toLose = m - target_w;
             double cal_deficit_total = weight_toLose * 7700; //since 1kg body fat has 7700 calories
-            double cal_deficit = cal_deficit_total / time;
+            double cal_deficit = Math.round(cal_deficit_total / time);
             System.out.println("If you want to lose " + weight_toLose + " to attain a weight of " + target_w + " in a period of " + time + " , then you need to consume " + cal_deficit + " to attain your target weight");
         } else if (bmi <= 40) {
             System.out.println("Name: " + n);
@@ -308,7 +308,7 @@ public class BMI {
             }
             double weight_toLose = m - target_w;
             double cal_deficit_total = weight_toLose * 7700; //since 1kg body fat has 7700 calories
-            double cal_deficit = cal_deficit_total / time;
+            double cal_deficit = (cal_deficit_total / time);
             System.out.println("If you want to lose " + weight_toLose + " to attain a weight of " + target_w + " in a period of " + time + " , then you need to consume " + cal_deficit + " to attain your target weight");
         }
 
