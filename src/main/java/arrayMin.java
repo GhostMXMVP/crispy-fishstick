@@ -1,0 +1,31 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author vivaantiwari
+ */
+import java.util.*;
+public class arrayMin {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter size of array: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        
+        for(int i = 0; i<arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+        
+        int min = arr[0];
+        for(int i = 0; i<arr.length; i++) {
+            if(arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        
+        System.out.println("Smallest numberin the array: " + min);
+    }
+}
