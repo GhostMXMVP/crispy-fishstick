@@ -57,8 +57,11 @@ public class LibraryBookManager {
                     break;
 
                 case 4:
-                    Collections.sort(library);
-                    System.out.println(library);
+                    if(library.isEmpty()) {
+                        System.out.println("There are no books");
+                    } else {
+                        System.out.println("There are books");
+                    }
                     break;
 
                 default:
