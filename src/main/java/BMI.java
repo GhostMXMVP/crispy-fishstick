@@ -94,6 +94,7 @@ public class BMI {
             System.out.println("Name: " + n);
             System.out.println();
             System.out.println("Age: " + a);
+            
             System.out.println();
             System.out.println("Gender: " + g);
             System.out.println();
@@ -331,4 +332,6 @@ public class BMI {
         BMI obj = new BMI();
         obj.BMICal(mass, height, name, age, gender, excercise);
     }
+    
+    
 }

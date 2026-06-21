@@ -1,3 +1,5 @@
+
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -41,9 +43,16 @@ public class Sorting {
             if(results.get(i) < min) {
                 min = results.get(i);
             }
+            
+            if(results.get(i) > 40) {
+                results.remove(results.get(i));               
+            }
         }
+        System.out.println(results);
         System.out.println("Minimum marks: " + min);
         System.out.println("Maximum marks: " + max);
+        
+       
         
     }
     
