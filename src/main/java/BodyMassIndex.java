@@ -171,4 +171,4 @@ public class BodyMassIndex {
         
         sc.close();
     } 
-} 
+}
