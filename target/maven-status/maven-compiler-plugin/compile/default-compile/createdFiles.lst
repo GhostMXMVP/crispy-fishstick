@@ -8,7 +8,6 @@ LogicalPrograms.class
 arrayMax.class
 LibraryBookManager.class
 arrays.class
-BMICalculator.class
 StudentSort.class
 HashDuplicate.class
 Sorting.class
@@ -23,4 +22,5 @@ BodyMassIndex.class
 Swap.class
 arraySecondLargest.class
 arrayReverse.class
+DatabaseManager.class
 arrayLinearSearch.class

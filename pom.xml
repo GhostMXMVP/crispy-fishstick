@@ -10,4 +10,14 @@
         <maven.compiler.release>26</maven.compiler.release>
         <exec.mainClass>com.test.mavenproject1.Calculator</exec.mainClass>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.2.224</version>
+            
+        
+    
+        </dependency>
+    </dependencies>
 </project>
